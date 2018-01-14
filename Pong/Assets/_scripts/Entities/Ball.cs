@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ball : MonoBehaviour {
 
@@ -21,11 +19,21 @@ public class Ball : MonoBehaviour {
         velocity = v;
     }
 
+    public Vector3 GetVelocity()
+    {
+        return velocity;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.tag.Equals("Paddle"))
         {
+            //Reverse the velocity
             velocity.x *= -1;
+
+            //slightly modify the y velocity based on where it was hit
+            float part =  transform.position.y - other.transform.position.y;
+            velocity.y += (part/10.0f);
         }
 
         if (other.tag.Equals("PlayerTwoGoal"))

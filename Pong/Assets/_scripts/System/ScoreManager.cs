@@ -1,11 +1,18 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class ScoreManager : MonoBehaviour {
 
     private static int playerOneScore;
     private static int playerTwoScore;
+
+    void Update()
+    {
+        if(playerOneScore >= 10 || playerTwoScore >= 10)
+        {
+            GameManager.GameSummaryScene();
+            CursorManager.ShowAndUnlockCursor();
+        }
+    }
 
     public static void AddPlayerOneScore()
     {

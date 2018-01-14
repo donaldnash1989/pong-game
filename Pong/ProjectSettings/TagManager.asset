@@ -8,6 +8,7 @@ TagManager:
   - PlayerOneGoal
   - PlayerTwoGoal
   - Spawner
+  - Ball
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerOnePaddle : MonoBehaviour, IInputListener {
 
@@ -9,14 +7,6 @@ public class PlayerOnePaddle : MonoBehaviour, IInputListener {
     void Awake()
     {
         InputHandler.GetInstance().Register(this);
-    }
-
-    void Start () {
-		
-	}
-	
-	void Update () {
-
     }
 
     public void mouseDeltaYChanged(float amount)

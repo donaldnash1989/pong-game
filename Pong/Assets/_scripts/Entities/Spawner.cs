@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Spawner : MonoBehaviour {
 
@@ -10,7 +8,7 @@ public class Spawner : MonoBehaviour {
 
     void Start () {
         GameObject ballReference = Instantiate(ballPrefab, playerOneSpawn.position, Quaternion.identity);
-        ballReference.GetComponent<Ball>().SetVelocity(new Vector3(0.1f, Random.Range(0, 2) == 0 ? -0.1f : 0.1f, 0.0f));
+        ballReference.GetComponent<Ball>().SetVelocity(new Vector3(0.5f, Random.Range(0, 2) == 0 ? -0.5f : 0.5f, 0.0f));
 	}
 	
 	void Update () {
@@ -24,11 +22,11 @@ public class Spawner : MonoBehaviour {
         {
             case 1:
                 ballReference = Instantiate(ballPrefab, playerOneSpawn.position, Quaternion.identity);
-                ballReference.GetComponent<Ball>().SetVelocity(new Vector3(0.1f, Random.Range(0, 2) == 0 ? -0.1f : 0.1f, 0.0f));
+                ballReference.GetComponent<Ball>().SetVelocity(new Vector3(0.5f, Random.Range(0, 2) == 0 ? -0.5f : 0.5f, 0.0f));
                 return;
             case 2:
                 ballReference = Instantiate(ballPrefab, playerTwoSpawn.position, Quaternion.identity);
-                ballReference.GetComponent<Ball>().SetVelocity(new Vector3(-0.1f, Random.Range(0, 2) == 0 ? -0.1f : 0.1f, 0.0f));
+                ballReference.GetComponent<Ball>().SetVelocity(new Vector3(-0.5f, Random.Range(0, 2) == 0 ? -0.5f : 0.5f, 0.0f));
                 return;
             default:
                 throw new System.Exception("Not a player spawn point");

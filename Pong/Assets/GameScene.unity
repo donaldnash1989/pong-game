@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 110693216}
   - component: {fileID: 110693215}
   - component: {fileID: 110693214}
+  - component: {fileID: 110693218}
   m_Layer: 0
   m_Name: PlayerTwoPaddle
   m_TagString: Paddle
@@ -409,6 +410,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &110693218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 110693213}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11315bd900783a478c2067fb4c80fe3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  yBound: 17.9969
+  speed: 25
+  detectionRange: 5
 --- !u!1 &131780411
 GameObject:
   m_ObjectHideFlags: 0
