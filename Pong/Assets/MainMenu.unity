@@ -124,6 +124,7 @@ GameObject:
   - component: {fileID: 26291166}
   - component: {fileID: 26291169}
   - component: {fileID: 26291168}
+  - component: {fileID: 26291170}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -163,7 +164,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 26291165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1ed8a99a736bfb40a6a6a5073e97a94, type: 3}
+  m_Script: {fileID: 11500000, guid: 9275683b69bc0dd4dbfe80a0d78b04f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &26291169
@@ -175,6 +176,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a1ed8a99a736bfb40a6a6a5073e97a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &26291170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 26291165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b43d64b9aadb2d448eceea5bb31b67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &176707445
@@ -398,6 +410,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 954680616}
         m_MethodName: LoadGame
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 954680616}
+        m_MethodName: HideAndLockCursor
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

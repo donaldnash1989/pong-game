@@ -440,6 +440,7 @@ GameObject:
   - component: {fileID: 408372836}
   - component: {fileID: 408372835}
   - component: {fileID: 408372834}
+  - component: {fileID: 408372837}
   m_Layer: 0
   m_Name: GameSummary
   m_TagString: Untagged
@@ -524,6 +525,18 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &408372837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 408372832}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a94b187a3cdc74bbccf35c7edf5c05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  winnerReadout: {fileID: 1157236248}
 --- !u!1 &654186192
 GameObject:
   m_ObjectHideFlags: 0
