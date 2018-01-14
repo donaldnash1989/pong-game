@@ -15,6 +15,8 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public static void ExitGame() { Application.Quit(); }
+
     public static void MainMenuScene() { SceneManager.LoadScene((int)Scenes.MAIN_MENU); }
 
     public static void GameScene() { SceneManager.LoadScene((int)Scenes.GAME); }

@@ -124,3 +124,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yBound: 19.481
+  hit: {fileID: 8300000, guid: 797e03a897459364f84d7b68ba4f6059, type: 3}
+  die: {fileID: 8300000, guid: 3f7b0c1dfd0511645a152d10f7b0c957, type: 3}

@@ -2,13 +2,20 @@
 
 public class ButtonHelper : MonoBehaviour {
 
+    public AudioClip clickSound;
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.L))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
             LoadGameSummary();
             ShowAndUnlockCursor();
         }
+    }
+
+    public void ExitGame()
+    {
+        GameManager.ExitGame();
     }
 
     public void LoadGame()
@@ -49,5 +56,10 @@ public class ButtonHelper : MonoBehaviour {
     public void SetHard()
     {
         DifficultyManager.SetHard();
+    }
+
+    public void PlayClick()
+    {
+        AudioManager.PlaySoundEffect(clickSound);
     }
 }
