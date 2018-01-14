@@ -17,35 +17,49 @@ public class PlayerTwoPaddleAI : MonoBehaviour {
         detectionRange = DifficultyManager.GetDetectionRange();
     }
 
-    void Update () {
-        if(ball == null) ball = GameObject.Find("Ball(Clone)");
-
+    void Update ()
+    {
         Vector3 position = transform.position;
-        float yPos = position.y;
-        float yBall = ball.transform.position.y;
-        if(ball.transform.position.x > -detectionRange && ball.GetComponent<Ball>().GetVelocity().x > 0)
+
+        if (ball == null)
         {
-            float yDist = ((yBall + yBound) - (yPos + yBound));
-
-            float newy = position.y + (yDist / Mathf.Abs(yDist)) * Time.deltaTime * speed;
-
-            if ((yDist > 0.5f || yDist < -0.5f) && (newy > -yBound && newy < yBound))
-            {
-                position.y = newy;
-            }
+            ball = GameObject.Find("Ball(Clone)");
+            position = Wandering(position);
         }
         else
         {
-            if (!newWander)
+            float yPos = position.y;
+            float yBall = ball.transform.position.y;
+            if (ball.transform.position.x > -detectionRange && ball.GetComponent<Ball>().GetVelocity().x > 0)
             {
-                StartCoroutine(Wander());
-            }
+                float yDist = ((yBall + yBound) - (yPos + yBound));
 
-            float newy = position.y + wanderAmount;            
-            position.y = Mathf.Clamp(newy, -yBound, yBound); ;
+                float newy = position.y + (yDist / Mathf.Abs(yDist)) * Time.deltaTime * speed;
+
+                if ((yDist > 0.5f || yDist < -0.5f) && (newy > -yBound && newy < yBound))
+                {
+                    position.y = newy;
+                }
+            }
+            else
+            {
+                position = Wandering(position);
+            }
         }
 
         transform.position = position;
+    }
+
+    private Vector3 Wandering(Vector3 position)
+    {
+        if (!newWander)
+        {
+            StartCoroutine(Wander());
+        }
+
+        float newy = position.y + wanderAmount;
+        position.y = Mathf.Clamp(newy, -yBound, yBound);
+        return position;
     }
 
     IEnumerator Wander()

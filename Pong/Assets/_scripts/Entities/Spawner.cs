@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 public class Spawner : MonoBehaviour {
 
@@ -19,17 +20,23 @@ public class Spawner : MonoBehaviour {
 
     public void SpawnBall(int player)
     {
+        StartCoroutine(Spawn(player));
+    }
+
+    IEnumerator Spawn(int player)
+    {
+        yield return new WaitForSeconds(1.0f);
         GameObject ballReference = null;
         switch (player)
         {
             case 1:
                 ballReference = Instantiate(ballPrefab, playerOneSpawn.position, Quaternion.identity);
                 ballReference.GetComponent<Ball>().SetVelocity(new Vector3(ballSpeed, Random.Range(-0.5f, 0.5f)));
-                return;
+                break;
             case 2:
                 ballReference = Instantiate(ballPrefab, playerTwoSpawn.position, Quaternion.identity);
                 ballReference.GetComponent<Ball>().SetVelocity(new Vector3(-ballSpeed, Random.Range(-0.5f, 0.5f)));
-                return;
+                break;
             default:
                 throw new System.Exception("Not a player spawn point");
         }

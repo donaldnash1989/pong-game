@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour {
             DontDestroyOnLoad(gameObject);
             isCreated = true;
         }
+        Screen.SetResolution(800, 600, false);
     }
 
     public static void ExitGame() { Application.Quit(); }
