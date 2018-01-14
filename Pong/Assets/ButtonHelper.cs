@@ -6,7 +6,8 @@ public class ButtonHelper : MonoBehaviour {
     {
         if (Input.GetKeyDown(KeyCode.L))
         {
-            GameManager.GameSummaryScene();
+            LoadGameSummary();
+            ShowAndUnlockCursor();
         }
     }
 
@@ -14,12 +15,24 @@ public class ButtonHelper : MonoBehaviour {
     {
         GameManager.GameScene();
     }
+
     public void LoadMainMenu()
     {
         GameManager.MainMenuScene();
     }
+
     public void LoadGameSummary()
     {
         GameManager.GameSummaryScene();
+    }
+
+    public void HideAndLockCursor()
+    {
+        CursorManager.HideAndLockCursor();
+    }
+
+    public void ShowAndUnlockCursor()
+    {
+        CursorManager.ShowAndUnlockCursor();
     }
 }
