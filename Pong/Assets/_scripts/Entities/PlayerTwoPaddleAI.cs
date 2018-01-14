@@ -5,13 +5,19 @@ public class PlayerTwoPaddleAI : MonoBehaviour {
 
     private GameObject ball;
     public float yBound = 18.0f;
-    public float speed = 1.0f;
-    public float detectionRange = 0.0f;
+    private float speed = 1.0f;
+    private float detectionRange = 0.0f;
 
     bool newWander = false;
     private float wanderAmount;
-	
-	void Update () {
+
+    void Start()
+    {
+        speed = DifficultyManager.GetPaddleSpeed();
+        detectionRange = DifficultyManager.GetDetectionRange();
+    }
+
+    void Update () {
         if(ball == null) ball = GameObject.Find("Ball(Clone)");
 
         Vector3 position = transform.position;

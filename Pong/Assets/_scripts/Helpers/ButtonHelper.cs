@@ -35,4 +35,19 @@ public class ButtonHelper : MonoBehaviour {
     {
         CursorManager.ShowAndUnlockCursor();
     }
+
+    public void SetEasy()
+    {
+        DifficultyManager.SetEasy();
+    }
+
+    public void SetMedium()
+    {
+        DifficultyManager.SetMedium();
+    }
+
+    public void SetHard()
+    {
+        DifficultyManager.SetHard();
+    }
 }

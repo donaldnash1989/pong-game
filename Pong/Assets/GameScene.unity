@@ -422,8 +422,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yBound: 17.9969
-  speed: 25
-  detectionRange: 5
+  speed: 45
+  detectionRange: 10
 --- !u!1 &131780411
 GameObject:
   m_ObjectHideFlags: 0
@@ -1748,6 +1748,7 @@ MonoBehaviour:
   ballPrefab: {fileID: 1932638850184394, guid: e6070004dccd62e4089408a01c928925, type: 2}
   playerOneSpawn: {fileID: 1608941229}
   playerTwoSpawn: {fileID: 1428299813}
+  ballSpeed: 1
 --- !u!4 &1836295277
 Transform:
   m_ObjectHideFlags: 0
