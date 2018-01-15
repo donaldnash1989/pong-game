@@ -24,14 +24,21 @@ public class InputHandler {
         listeners.Remove(listener);
     }
 
-    public void Notify(float amount)
+    public void NotifyMouseMove(float amount)
     {
         foreach(IInputListener listener in listeners)
         {
-            //Notify listeners of input
+            //Notify listeners of mouse input
             listener.mouseDeltaYChanged(amount);
         }
     }
 
-
+    public void NotifyCtrlPressed()
+    {
+        foreach (IInputListener listener in listeners)
+        {
+            //Notify listeners of key input
+            listener.CtrlPressed();
+        }
+    }
 }

@@ -24,4 +24,8 @@ public class CursorManager : MonoBehaviour {
         Cursor.lockState = CursorLockMode.None;
     }
 
+    public static bool CursorVisible()
+    {
+        return Cursor.visible;
+    }
 }
