@@ -36,7 +36,7 @@ public class PlayerTwoPaddleAI : MonoBehaviour {
 
                 float newy = position.y + (yDist / Mathf.Abs(yDist)) * Time.deltaTime * speed;
 
-                if ((yDist > 0.5f || yDist < -0.5f) && (newy > -yBound && newy < yBound))
+                if ((yDist > 1.5f || yDist < -1.5f) && (newy > -yBound && newy < yBound))
                 {
                     position.y = newy;
                 }

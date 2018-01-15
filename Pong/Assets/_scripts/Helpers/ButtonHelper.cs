@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-public class ButtonHelper : MonoBehaviour {
-
+public class ButtonHelper : MonoBehaviour
+{
     public AudioClip clickSound;
 
     void Update()

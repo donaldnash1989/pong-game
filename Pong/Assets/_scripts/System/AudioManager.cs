@@ -21,8 +21,6 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        PlayerPrefs.SetFloat("BGM", 1.0f);
-        PlayerPrefs.SetFloat("SFX", 1.0f);
         BGMVolume = PlayerPrefs.GetFloat("BGM");
         SFXVolume = PlayerPrefs.GetFloat("SFX");
         _bgm = bgm;
@@ -37,6 +35,9 @@ public class AudioManager : MonoBehaviour
 
         bgmPlayer.volume = BGMVolume;
         sfxPlayer.volume = SFXVolume;
+
+        bgmPlayer.mute = Convert.IntToBool(PlayerPrefs.GetInt("Mute"));
+        sfxPlayer.mute = Convert.IntToBool(PlayerPrefs.GetInt("Mute"));
 
         PlayTrack();
     }
@@ -126,9 +127,27 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    public static bool IsMuted()
+    {
+        return sfxPlayer.mute;
+    }
+
+    public static void Mute()
+    {
+        bgmPlayer.mute = true;
+        sfxPlayer.mute = true;
+    }
+
+    public static void UnMute()
+    {
+        bgmPlayer.mute = false;
+        sfxPlayer.mute = false;
+    }
+
     void OnApplicationQuit()
     {
         PlayerPrefs.SetFloat("BGM", BGMVolume);
         PlayerPrefs.SetFloat("SFX", SFXVolume);
+        PlayerPrefs.SetInt("Mute", Convert.BoolToInt(sfxPlayer.mute));
     }
 }

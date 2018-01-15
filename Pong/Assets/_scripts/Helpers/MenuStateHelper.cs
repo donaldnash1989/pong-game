@@ -2,13 +2,12 @@
 
 public class MenuStateHelper : MonoBehaviour {
 
-    public Canvas DifficultyMenu;
+    public Canvas[] menus;
     
 	void Start () {
-        DifficultyMenu.enabled = false;
-	}
-	
-	void Update () {
-		
+        foreach (Canvas menu in menus)
+        {
+            menu.enabled = false;
+        }
 	}
 }
