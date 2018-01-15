@@ -2577,6 +2577,116 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1285309023}
+--- !u!1001 &1303739268
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1344367305}
+    m_Modifications:
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 361.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 185.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 57.76
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 51.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114904925663602948, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 954680616}
+    - target: {fileID: 114904925663602948, guid: 70a0f027f113bc94abc543990d1fdeab,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: PlayClick
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 70a0f027f113bc94abc543990d1fdeab, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1344367304
 GameObject:
   m_ObjectHideFlags: 0
@@ -2607,6 +2717,7 @@ RectTransform:
   m_Children:
   - {fileID: 2059317104}
   - {fileID: 1820791179}
+  - {fileID: 1501358976}
   m_Father: {fileID: 954680615}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2642,7 +2753,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -2672,6 +2783,11 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!224 &1501358976 stripped
+RectTransform:
+  m_PrefabParentObject: {fileID: 224742812008432082, guid: 70a0f027f113bc94abc543990d1fdeab,
+    type: 2}
+  m_PrefabInternal: {fileID: 1303739268}
 --- !u!1 &1520628098
 GameObject:
   m_ObjectHideFlags: 0
@@ -3324,6 +3440,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2059317106}
+        m_MethodName: SaveSettings
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1820791181
@@ -3521,6 +3648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059317104}
   - component: {fileID: 2059317105}
+  - component: {fileID: 2059317106}
   m_Layer: 0
   m_Name: VolumeSlider
   m_TagString: Untagged
@@ -3598,6 +3726,17 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &2059317106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2059317103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecca80984a8eb324082a8d7687ef4fe4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2088523823
 GameObject:
   m_ObjectHideFlags: 0
