@@ -11,7 +11,7 @@ I've attempted to keep it as retro as possible with a few subtle additions for m
 
 ## Running
 
-The 'build' folder has everything need to play the game.
+The 'dist' folder has everything need to play the game.
 Just copy the build folder and run the .exe file
 
 ## Development
