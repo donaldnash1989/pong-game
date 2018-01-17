@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour {
 
@@ -7,11 +8,10 @@ public class Spawner : MonoBehaviour {
     public Transform playerOneSpawn;
     public Transform playerTwoSpawn;
     private float ballSpeed = 0.5f;
+    public Canvas spawnButton;
 
     void Start () {
         ballSpeed = DifficultyManager.GetBallSpeed();
-        GameObject ballReference = Instantiate(ballPrefab, playerOneSpawn.position, Quaternion.identity);
-        ballReference.GetComponent<Ball>().SetVelocity(new Vector3(ballSpeed, Random.Range(-0.5f, 0.5f)));
 	}
 	
 	void Update () {
@@ -20,11 +20,13 @@ public class Spawner : MonoBehaviour {
 
     public void SpawnBall(int player)
     {
-        StartCoroutine(Spawn(player));
+        StartCoroutine(Spawn());
+        spawnButton.enabled = false;
     }
 
-    IEnumerator Spawn(int player)
+    IEnumerator Spawn()
     {
+        int player = ScoreManager.GetTurn();
         yield return new WaitForSeconds(1.0f);
         GameObject ballReference = null;
         switch (player)
@@ -41,4 +43,21 @@ public class Spawner : MonoBehaviour {
                 throw new System.Exception("Not a player spawn point");
         }
     }
+
+    public void EnableServe()
+    {
+        if (Convert.IntToBool(PlayerPrefs.GetInt("AutoServe")))
+        {
+            StartCoroutine(Spawn());
+        }
+        else
+        {
+            spawnButton.enabled = true;
+
+            //free up the players mouse
+            CursorManager.ShowAndUnlockCursor();
+        }
+    }
+
+
 }

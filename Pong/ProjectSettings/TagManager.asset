@@ -9,6 +9,7 @@ TagManager:
   - PlayerTwoGoal
   - Spawner
   - Ball
+  - ServeButton
   layers:
   - Default
   - TransparentFX

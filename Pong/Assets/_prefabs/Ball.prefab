@@ -124,5 +124,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   yBound: 19.481
+  wallHitParticlePrefab: {fileID: 1625628025159226, guid: 823ca33aef0ed574996896c311ae629c,
+    type: 2}
+  deathParticlePrefab: {fileID: 1178168048935292, guid: 430bb8e6ab2193541bbb8d5992e56d06,
+    type: 2}
   hit: {fileID: 8300000, guid: 797e03a897459364f84d7b68ba4f6059, type: 3}
   die: {fileID: 8300000, guid: 3f7b0c1dfd0511645a152d10f7b0c957, type: 3}

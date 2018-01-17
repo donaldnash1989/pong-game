@@ -4,6 +4,7 @@ public class ScoreManager : MonoBehaviour {
 
     private static int playerOneScore;
     private static int playerTwoScore;
+    private static int turn = 1;
 
     void Update()
     {
@@ -37,5 +38,15 @@ public class ScoreManager : MonoBehaviour {
     public static void ResetScores()
     {
         playerOneScore = playerTwoScore = 0;
+    }
+
+    public static void SetTurn(int player)
+    {
+        turn = player;
+    }
+
+    public static int GetTurn()
+    {
+        return turn;
     }
 }

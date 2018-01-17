@@ -4,9 +4,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     private static bool isCreated = false;
+    public static bool firstPlay;
 
     void Awake()
     {
+        firstPlay = !Convert.IntToBool(PlayerPrefs.GetInt("FirstPlay"));
         if (isCreated) Destroy(gameObject);
         else
         {

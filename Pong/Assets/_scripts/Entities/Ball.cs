@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 
 public class Ball : MonoBehaviour {
 
     private Vector3 velocity;
     public float yBound = 18;
+    public GameObject wallHitParticlePrefab;
+    public GameObject deathParticlePrefab;
 
     public AudioClip hit, die;
 	
@@ -12,6 +15,7 @@ public class Ball : MonoBehaviour {
         if(transform.position.y > yBound || transform.position.y < -yBound)
         {
             velocity.y *= -1;
+            Instantiate(wallHitParticlePrefab, transform.position, Quaternion.identity);
             AudioManager.PlaySoundEffect(hit);
         }
         transform.position += velocity;
@@ -47,29 +51,40 @@ public class Ball : MonoBehaviour {
             //Add to player two score
             ScoreManager.AddPlayerTwoScore();
 
-            //Spawn next ball at player two spawn
-            GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().SpawnBall(2);
+            //Set serve turn
+            ScoreManager.SetTurn(2);
 
-            //Play death sound
-            AudioManager.PlaySoundEffect(die);
-
-            //Destroy this ball
-            Destroy(gameObject);
+            //prep next ball
+            NextBall();
         }
 
         if (other.tag.Equals("PlayerOneGoal"))
         {
-            //Add to player one score
+            //Add to player two score
             ScoreManager.AddPlayerOneScore();
 
-            //Spawn next ball at player one spawn
-            GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().SpawnBall(1);
+            //Set serve turn
+            ScoreManager.SetTurn(1);
 
-            //Play death sound
-            AudioManager.PlaySoundEffect(die);
-
-            //Destroy this ball
-            Destroy(gameObject);
+            //prep next ball
+            NextBall();
         }
+    }
+
+    private void NextBall()
+    {
+        CameraController.Shake();
+
+        //Enable serve button
+        GameObject.FindGameObjectWithTag("Spawner").GetComponent<Spawner>().EnableServe();
+
+        //Play death sound
+        AudioManager.PlaySoundEffect(die);
+
+        //Create death particle effect
+        Instantiate(deathParticlePrefab, transform.position, Quaternion.identity);
+
+        //Destroy this ball
+        Destroy(gameObject);
     }
 }
